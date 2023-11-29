@@ -1,9 +1,11 @@
 # ./Frontend/Dockerfile
-FROM node:17-alpine
+FROM node:17-alpine  AS development
+
+ENV NODE_ENV development
 
 WORKDIR /app
 
-COPY package.json .
+COPY package*.json /app
 
 RUN npm install
 
