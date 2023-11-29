@@ -12,7 +12,7 @@ Driver activity monitor
 # Installation
 
 ```
-git clone 
+git clone https://github.com/knaveen29/DriverMonitor.git
 ```
 
 ## Build
@@ -78,8 +78,7 @@ npm run test
 
 # Additional Links
 
-1. [Jenkins Job](https://jenkins.csod.svc/job/AWS-INFRA/job/REC/job/rec-candidate-email/)
-2. [React-Bootstrap UI](https://react-bootstrap.netlify.app/)
-3. [Postgres handy command](https://www.postgresqltutorial.com/postgresql-administration/psql-commands/)
-4. [Jest tests](https://jestjs.io/docs/getting-started)
-5. 
+1. [React-Bootstrap UI](https://react-bootstrap.netlify.app/)
+2. [Postgres handy command](https://www.postgresqltutorial.com/postgresql-administration/psql-commands/)
+3. [Jest tests](https://jestjs.io/docs/getting-started)
+4. 
