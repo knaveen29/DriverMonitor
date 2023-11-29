@@ -1,0 +1,41 @@
+version: "3"
+
+volumes:
+  local_postgres_data: {}
+
+services: 
+  web:
+    build: ./DriverMonitorBackend
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+    depends_on:
+      - db
+    volumes:
+      - ./DriverMonitorBackend:/app
+      - /app/bin
+      - /app/obj
+
+  db:
+    image: postgres:11.9
+    ports:
+      - "2232:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - "./dbdata:/var/lib/postgresql/data"
+      
+  client:
+    build: ./ClientApp
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./ClientApp:/app
+    stdin_open: true
+    tty: true
+
+  #unittests:
+  #  build: ./DriverMonitorBackend.UnitTests
+  #  tty: true 
