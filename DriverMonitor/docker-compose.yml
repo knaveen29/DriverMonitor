@@ -36,6 +36,8 @@ services:
       - "3000:3000"
     volumes:
       - ./ClientApp:/app
+      - '.:/app'
+      - '/app/node_modules'
     stdin_open: true
     tty: true
 
